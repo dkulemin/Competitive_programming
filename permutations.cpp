@@ -5,9 +5,18 @@ using namespace std;
 
 vector<int> permutation;
 
-void print_vector(const vector<int>& vec) {
+template <typename T>
+void print_vector(const vector<T>& vec) {
     for (size_t i = 0; i < vec.size(); i++) {
         cout << vec[i] << " ";
+    }
+    cout << "\n";
+}
+
+template <typename T>
+void print_array(const T* arr, const int n) {
+    for (size_t i = 0; i < n; i++) {
+        cout << arr[i] << " ";
     }
     cout << "\n";
 }
@@ -31,6 +40,7 @@ int main() {
     int n;
     cin >> n;
     bool chosen[n + 1];
+    // print_array(chosen, n);
     search(n, chosen);
     return 0;
 }
