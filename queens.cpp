@@ -21,14 +21,13 @@ void search(int y) {
 
 int main() {
     cin >> n;
-    cout << n << "\n";
     col = (int *) malloc(n * sizeof(int));
     diag1 = (int *) malloc(2 * n * sizeof(int));
     diag2 = (int *) malloc(2 * n * sizeof(int));
 
     search(0);
 
-    cout << cnt << "\n";
+    cout << "posible positions of queens: " << cnt << "\n";
 
     free(col);
     free(diag1);
