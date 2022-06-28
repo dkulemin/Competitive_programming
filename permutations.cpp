@@ -40,7 +40,6 @@ int main() {
     int n;
     cin >> n;
     bool chosen[n + 1];
-    // print_array(chosen, n);
     search(n, chosen);
     return 0;
 }
