@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -36,10 +37,25 @@ void search(const int& n, bool* chosen) {
     }
 }
 
+void search_2(const int& n) {
+    for (size_t i = 1; i <= n; i++) {
+        permutation.push_back(i);
+    }
+    do {
+        print_vector(permutation);
+    } while (next_permutation(permutation.begin(), permutation.end()));    
+}
+
 int main() {
     int n;
     cin >> n;
+
+    cout << "permutations with chosen:" << "\n";
     bool chosen[n + 1];
     search(n, chosen);
+
+    cout << "permutations with next_permutation:" << "\n";
+    search_2(n);
+    
     return 0;
 }
