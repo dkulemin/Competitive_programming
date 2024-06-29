@@ -2,9 +2,6 @@
 FOLDER=$1
 MODE=$2
 
-echo "$FOLDER"
-echo "$MODE"
-
 cd $FOLDER
 
 if [[ "$MODE" == "test" ]]; then
