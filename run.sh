@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
-FOLDER=$1
+PROBLEM_NAME=$1
 MODE=$2
 
-cd $FOLDER
+cd $PROBLEM_NAME
 
 if [[ "$MODE" == "test" ]]; then
-    g++ -std=c++17 test.cpp -o test.o -lgtest -lgtest_main
+    g++ -std=c++17 $PROBLEM_NAME.cpp test.cpp -o test.o -lgtest -lgtest_main
     ./test.o
 else
-    g++ -std=c++17 $FOLDER.cpp -o $FOLDER.o
-    ./$FOLDER.o
+    g++ -std=c++17 $PROBLEM_NAME.cpp run.cpp -o run.o
+    ./run.o
 fi
 
 rm -rf *.o
