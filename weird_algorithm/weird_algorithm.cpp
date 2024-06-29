@@ -1,10 +1,9 @@
 #include <iostream>
+#include "weird_algorithm.h"
 
 using namespace std;
 
-int main() {
-    long long n;
-    cin >> n;
+void weird_algorithm(long long n) {
     while (n != 1) {
         cout << n << " ";
         if (n % 2 == 0) {
@@ -15,5 +14,4 @@ int main() {
         }
     }
     cout << 1 << endl;
-    return 0;
 }
