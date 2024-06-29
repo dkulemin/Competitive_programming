@@ -6,7 +6,7 @@
 #include "gtest/gtest.h"
 
 
-TEST(NumericSpiral, EQ) {
+TEST(NumberSpiral, EQ) {
     EXPECT_EQ(13, number_spiral(4, 4));
     EXPECT_EQ(889344699930098742, number_spiral(170550340LL, 943050741LL));
 }
