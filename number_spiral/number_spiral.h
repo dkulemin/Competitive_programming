@@ -1,1 +1,0 @@
-long long int number_spiral(long long int x, long long int y);

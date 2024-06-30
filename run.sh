@@ -5,11 +5,11 @@ MODE=$2
 cd $PROBLEM_NAME
 
 if [[ "$MODE" == "test" ]]; then
-    g++ -std=c++17 $PROBLEM_NAME.cpp test.cpp -o test.o -lgtest -lgtest_main
-    ./test.o
+    g++ -std=c++17 $PROBLEM_NAME.cpp -o $PROBLEM_NAME.o -D_TEST -lgtest -lgtest_main
+    ./$PROBLEM_NAME.o
 else
-    g++ -std=c++17 $PROBLEM_NAME.cpp run.cpp -o run.o
-    ./run.o
+    g++ -std=c++17 $PROBLEM_NAME.cpp -o $PROBLEM_NAME.o
+    ./$PROBLEM_NAME.o
 fi
 
-rm -rf *.o
+rm -rf $PROBLEM_NAME.o
